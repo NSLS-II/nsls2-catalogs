@@ -62,7 +62,6 @@ setup(
                             'ISS = catalogs.iss:catalog',
                             'IXS = catalogs.ixs:catalog',
                             'CMS = catalogs.cms:catalog',
-                            'CHS = catalogs.chs:catalog',
                             'SMI = catalogs.smi:catalog',
                             'LIX = catalogs.lix:catalog',
                             'XFP = catalogs.xfp:catalog',
