@@ -75,7 +75,10 @@ setup(
                             'CSX = catalogs.csx:catalog',
                             'IOS = catalogs.ios:catalog',
                             'PDF = catalogs.pdf:catalog',
+                            'XFM = catalogs.xfm:catalog',
                             'XPD = catalogs.xpd:catalog',
+                            'XPDD = catalogs.xpdd:catalog',
+                            'RSOXS = catalogs.rsoxs:catalog',
                             'HEX = catalogs.hex:catalog'
         ]
     },

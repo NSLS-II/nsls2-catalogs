@@ -1,0 +1,22 @@
+metadatastore:
+    module: databroker.headersource.mongo
+    class: MDS
+    config:
+        host: 'xf02id1-ca1'
+        port: 27017
+        database: 'metadatastore-production-v1'
+        timezone: 'US/Eastern'
+assets:
+    module: databroker.assets.mongo
+    class: Registry
+    config:
+        host: 'xf02id1-ca1'
+        port: 27017
+        database: 'filestore-production-v1'
+handlers:
+    'AD_HDF5_SINGLE':
+        module: sixtools.AD_Handler
+        class: AreaDetector_HDF5SingleHandler_DataFrame
+    'AD_HDF5_SINGLE_XIP':
+        module: sixtools.AD_Handler
+        class: AreaDetector_HDF5SingleHandler_DataFrame

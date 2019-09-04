@@ -1,0 +1,17 @@
+description: 'CSX raw data'
+metadatastore:
+    module: 'databroker.headersource.mongo'
+    class: 'MDS'
+    config:
+        host: 'xf23id-broker'
+        port: 27017
+        database: 'datastore2'
+        timezone: 'US/Eastern'
+        auth: False
+assets:
+    module: 'databroker.assets.mongo'
+    class: 'Registry'
+    config:
+        host: 'xf23id-broker'
+        port: 27017
+        database: 'filestore'
