@@ -49,6 +49,7 @@ setup(
             # 'command = some.module:some_function',
         ],
         'intake.catalogs': [
+                            'local = catalogs.local:catalog',
                             'SIX = catalogs.six:catalog',
                             'HXN = catalogs.hxn:catalog',
                             'ISR = catalogs.isr:catalog',
@@ -78,6 +79,7 @@ setup(
                             'XFM = catalogs.xfm:catalog',
                             'XPD = catalogs.xpd:catalog',
                             'XPDD = catalogs.xpdd:catalog',
+                            'JPLS = catalogs.jpls:catalog',
                             'RSOXS = catalogs.rsoxs:catalog',
                             'HEX = catalogs.hex:catalog'
         ]
