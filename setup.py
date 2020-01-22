@@ -48,8 +48,7 @@ setup(
         'console_scripts': [
             # 'command = some.module:some_function',
         ],
-        'intake.catalogs': [
-                            'local = catalogs.local:catalog',
+        'intake.catalogs': ['local = catalogs.local:catalog',
                             'SIX = catalogs.six:catalog',
                             'HXN = catalogs.hxn:catalog',
                             'ISR = catalogs.isr:catalog',
@@ -75,8 +74,34 @@ setup(
                             'XPD = catalogs.xpd:catalog',
                             'XPDD = catalogs.xpdd:catalog',
                             'JPLS = catalogs.jpls:catalog',
-                            'RSOXS = catalogs.rsoxs:catalog'
-        ]
+                            'RSOXS = catalogs.rsoxs:catalog']
+        'catalogs.v1': [    'local = catalogs.local:v1_catalog',
+                            'SIX = catalogs.six:v1_catalog',
+                            'HXN = catalogs.hxn:v1_catalog',
+                            'ISR = catalogs.isr:v1_catalog',
+                            'SRX = catalogs.srx:v1_catalog',
+                            'BMM = catalogs.bmm:v1_catalog',
+                            'QAS = catalogs.qas:v1_catalog',
+                            'TES = catalogs.tes:v1_catalog',
+                            'ISS = catalogs.iss:v1_catalog',
+                            'IXS = catalogs.ixs:v1_catalog',
+                            'CMS = catalogs.cms:v1_catalog',
+                            'CHX = catalogs.chx:v1_catalog',
+                            'SMI = catalogs.smi:v1_catalog',
+                            'LIX = catalogs.lix:v1_catalog',
+                            'XFP = catalogs.xfp:v1_catalog',
+                            'AMX = catalogs.amx:v1_catalog',
+                            'FMX = catalogs.fmx:v1_catalog',
+                            'FXI = catalogs.fxi:v1_catalog',
+                            'ESM = catalogs.esm:v1_catalog',
+                            'CSX = catalogs.csx:v1_catalog',
+                            'IOS = catalogs.ios:v1_catalog',
+                            'PDF = catalogs.pdf:v1_catalog',
+                            'XFM = catalogs.xfm:v1_catalog',
+                            'XPD = catalogs.xpd:v1_catalog',
+                            'XPDD = catalogs.xpdd:v1_catalog',
+                            'JPLS = catalogs.jpls:v1_catalog',
+                            'RSOXS = catalogs.rsoxs:v1_catalog']
     },
     include_package_data=True,
     package_data={

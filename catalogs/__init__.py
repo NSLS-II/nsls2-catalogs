@@ -1,13 +1,17 @@
 import os
 import yaml
 
+from databroker.discovery import EntrypointsCatalog
 from ._version import get_versions
+
 __version__ = get_versions()['version']
 del get_versions
 
+
 v0_catalog = EntrypointsCatalog(entrypoints_group='catalogs.v0')
-v1_catalog = EntrypointsCatalog(entrypoints_group='catalogs.v1'
-catalog = EntrypointsCatalog(entrypoints_group='catalogs')
+v1_catalog = EntrypointsCatalog(entrypoints_group='catalogs.v1')
+catalog = EntrypointsCatalog(entrypoints_group='intake.catalogs')
+
 
 def load_config(filename):
     package_directory = os.path.dirname(os.path.abspath(__file__))
