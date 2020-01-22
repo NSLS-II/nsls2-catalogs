@@ -74,7 +74,7 @@ setup(
                             'XPD = catalogs.xpd:catalog',
                             'XPDD = catalogs.xpdd:catalog',
                             'JPLS = catalogs.jpls:catalog',
-                            'RSOXS = catalogs.rsoxs:catalog']
+                            'RSOXS = catalogs.rsoxs:catalog'],
         'catalogs.v1': [    'local = catalogs.local:v1_catalog',
                             'SIX = catalogs.six:v1_catalog',
                             'HXN = catalogs.hxn:v1_catalog',
