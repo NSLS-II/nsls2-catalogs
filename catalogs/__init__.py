@@ -1,3 +1,4 @@
+import entrypoints
 import os
 import yaml
 
@@ -8,8 +9,8 @@ __version__ = get_versions()['version']
 del get_versions
 
 
-v0_catalog = EntrypointsCatalog(entrypoints_group='catalogs.v0')
-v1_catalog = EntrypointsCatalog(entrypoints_group='catalogs.v1')
+v0_catalog = entrypoints.get_group_named('catalogs.v0')
+v1_catalog = entrypoints.get_group_named('catalogs.v1')
 catalog = EntrypointsCatalog(entrypoints_group='intake.catalogs')
 
 
