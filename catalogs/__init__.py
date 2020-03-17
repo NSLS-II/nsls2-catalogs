@@ -13,6 +13,9 @@ v0_catalog = entrypoints.get_group_named('catalogs.v0')
 v1_catalog = entrypoints.get_group_named('catalogs.v1')
 catalog = EntrypointsCatalog(entrypoints_group='intake.catalogs')
 
+central_v0 = entrypoints.get_group_named('catalogs.v0')
+central_v1 = entrypoints.get_group_named('catalogs.v1')
+central = EntrypointsCatalog(entrypoints_group='intake.catalogs')
 
 def load_config(filename):
     package_directory = os.path.dirname(os.path.abspath(__file__))
