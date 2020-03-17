@@ -48,7 +48,7 @@ setup(
         'console_scripts': [
             # 'command = some.module:some_function',
         ],
-        'intake.catalogs': ['local = catalogs.local:catalog',
+        'catalogs.v2': ['local = catalogs.local:catalog',
                             'SIX = catalogs.six:catalog',
                             'HXN = catalogs.hxn:catalog',
                             'ISR = catalogs.isr:catalog',
