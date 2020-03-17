@@ -22,3 +22,24 @@ def load_config(filename):
     filename = os.path.join(package_directory, filename)
     with open(filename) as f:
         return yaml.load(f, Loader=getattr(yaml, 'FullLoader', yaml.Loader))
+
+
+def load_config_central(filename, beamline):
+    config = load_config(filename)
+    beamline_database = f"{beamline}-bluesky-documents"
+
+    config['metadatastore']['config'].pop('host', None)
+    config['metadatastore']['config'].pop('port', None)
+    config['assets']['config'].pop('host', None)
+    config['assets']['config'].pop('port', None)
+
+    username = beamline
+    password = os.enviorn.get('{beamline}_mongo_password')
+
+    central_uri = (f'mongodb://{username}:{password}@mongo01.cs.nsls2.local:27212,'
+                   'mongo02.cs.nsls2.local:27213,mongo03.cs.nsls2.local:27214')
+
+    config['metadatastore']['config']['uri'] = central_uri
+    config['metadatastore']['config']['database'] = beamline_database
+    config['assets']['config']['uri'] = central_uri
+    config['assets']['config']['database'] = beamline_database
