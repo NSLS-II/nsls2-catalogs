@@ -28,18 +28,22 @@ def load_config_central(filename, beamline):
     config = load_config(filename)
     beamline_database = f"{beamline}-bluesky-documents"
 
+    # Each beamline has its own account for the central mongo.
+    username = beamline
+    password = os.enviorn.get('{beamline}_mongo_password')s
+    central_uri = (f'mongodb://{username}:{password}@mongo01.cs.nsls2.local:27212,'
+                   'mongo02.cs.nsls2.local:27213,mongo03.cs.nsls2.local:27214')
+
+    # Remove host and port, because we need to connect with a uri to the central database.
     config['metadatastore']['config'].pop('host', None)
     config['metadatastore']['config'].pop('port', None)
     config['assets']['config'].pop('host', None)
     config['assets']['config'].pop('port', None)
 
-    username = beamline
-    password = os.enviorn.get('{beamline}_mongo_password')
-
-    central_uri = (f'mongodb://{username}:{password}@mongo01.cs.nsls2.local:27212,'
-                   'mongo02.cs.nsls2.local:27213,mongo03.cs.nsls2.local:27214')
-
+    # Add the uri, and update the database name.
     config['metadatastore']['config']['uri'] = central_uri
     config['metadatastore']['config']['database'] = beamline_database
     config['assets']['config']['uri'] = central_uri
     config['assets']['config']['database'] = beamline_database
+
+    return config
