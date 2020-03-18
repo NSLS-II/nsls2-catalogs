@@ -13,5 +13,3 @@ assets:
         host: 'localhost'
         port: 27017
         database: 'rsoxs-assets-store'
-transforms:
-    descriptor: 'nslsii.transforms.rsoxs_fix_shape'
