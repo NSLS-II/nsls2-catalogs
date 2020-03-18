@@ -9,8 +9,8 @@ __version__ = get_versions()['version']
 del get_versions
 
 
-v0_catalog = entrypoints.get_group_named('catalogs.v0')
-v1_catalog = entrypoints.get_group_named('catalogs.v1')
+catalog_v0 = entrypoints.get_group_named('catalogs.v0')
+catalog_v1 = entrypoints.get_group_named('intake.catalogs')
 catalog = EntrypointsCatalog(entrypoints_group='catalogs.v2')
 central_v0 = entrypoints.get_group_named('catalogs.central.v0')
 central_v1 = entrypoints.get_group_named('catalogs.central.v1')
