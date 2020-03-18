@@ -4,7 +4,7 @@ metadatastore:
     config:
         host: 'localhost'
         port: 27017
-        database: 'rsoxs-metadata-store'
+        database: 'metadatastore-local'
         timezone: 'US/Eastern'
 assets:
     module: databroker.assets.mongo
@@ -12,4 +12,4 @@ assets:
     config:
         host: 'localhost'
         port: 27017
-        database: 'rsoxs-assets-store'
+        database: 'asset-registry-local'
