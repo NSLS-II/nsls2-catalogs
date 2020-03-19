@@ -128,7 +128,7 @@ setup(
                         'xpd = catalogs.xpd:v0_catalog',
                         'xpdd = catalogs.xpdd:v0_catalog',
                         'jpls = catalogs.jpls:v0_catalog',
-                        'rsoxs = catalogs.rsoxs:v0_catalog']
+                        'rsoxs = catalogs.rsoxs:v0_catalog'],
         'catalogs.central.v2': ['six = catalogs.six:central',
                                 'hxn = catalogs.hxn:central',
                                 'isr = catalogs.isr:central',
