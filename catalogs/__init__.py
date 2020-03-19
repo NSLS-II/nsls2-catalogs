@@ -30,7 +30,7 @@ def load_config_central(filename, beamline):
 
     # Each beamline has its own account for the central mongo.
     username = beamline
-    password = os.enviorn.get('{beamline}_mongo_password')s
+    password = os.enviorn.get('{beamline}_mongo_password')
     central_uri = (f'mongodb://{username}:{password}@mongo01.cs.nsls2.local:27212,'
                    'mongo02.cs.nsls2.local:27213,mongo03.cs.nsls2.local:27214')
 
