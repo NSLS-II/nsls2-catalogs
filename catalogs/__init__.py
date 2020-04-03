@@ -29,7 +29,6 @@ def load_config_central(filename, beamline):
     beamline_database = f"{beamline}-bluesky-documents"
 
     # Each beamline has its own account for the central mongo.
-    import pdb; pdb.set_trace()
     username = beamline
     password = os.environ.get(f'{beamline}_mongo_password')
     central_uri = (f'mongodb://{username}:{password}@mongo01.cs.nsls2.local:27212,'
