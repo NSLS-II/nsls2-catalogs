@@ -14,3 +14,5 @@ assets:
         host: 'xf07id1-ca1'
         port: 27017
         database: 'rsoxs-assets-store'
+transforms:
+    descriptor: 'nslsii.transforms.rsoxs_fix_shape'
