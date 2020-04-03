@@ -180,7 +180,7 @@ setup(
                                 'xpd = catalogs.xpd.central:v1_central',
                                 'xpdd = catalogs.xpdd.central:v1_central',
                                 'jpls = catalogs.jpls.central:v1_central',
-                                'rsoxs = catalogs.rsoxs.central:v0_central'],
+                                'rsoxs = catalogs.rsoxs.central:v1_central'],
         'catalogs.central.v0': ['six = catalogs.six.central:v0_central',
                                 'hxn = catalogs.hxn.central:v0_central',
                                 'isr = catalogs.isr.central:v0_central',
@@ -205,7 +205,8 @@ setup(
                                 'xfm = catalogs.xfm.central:v0_central',
                                 'xpd = catalogs.xpd.central:v0_central',
                                 'xpdd = catalogs.xpdd.central:v0_central',
-                                'jpls = catalogs.jpls.central:v0_central']
+                                'jpls = catalogs.jpls.central:v0_central',
+                                'rsoxs = catalogs.rsoxs.central:v0_central'],
         },
     include_package_data=True,
     package_data={
