@@ -10,8 +10,8 @@ del get_versions
 
 
 v0_catalog = entrypoints.get_group_named('catalogs.v0')
-v1_catalog = entrypoints.get_group_named('intake.catalogs')
-catalog = EntrypointsCatalog(entrypoints_group='catalogs.v2')
+v1_catalog = entrypoints.get_group_named('catalogs.v1')
+catalog = EntrypointsCatalog(entrypoints_group='intake.catalogs')
 
 
 def load_config(filename):
