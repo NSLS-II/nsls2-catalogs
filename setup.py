@@ -10,7 +10,7 @@ import versioneer
 min_version = (3, 6)
 if sys.version_info < min_version:
     error = """
-catalogs does not support Python {0}.{1}.
+nsls2-catalogs does not support Python {0}.{1}.
 Python {2}.{3} and above is required. Check your Python version like so:
 
 python3 --version
@@ -34,10 +34,10 @@ with open(path.join(here, 'requirements.txt')) as requirements_file:
 
 
 setup(
-    name='catalogs',
+    name='nsls2-catalogs',
     version=versioneer.get_version(),
     cmdclass=versioneer.get_cmdclass(),
-    description="intake catalogs",
+    description="databroker catalogs",
     long_description=readme,
     author="NSLS-II",
     author_email='gbischof@bnl.gov',
@@ -210,7 +210,7 @@ setup(
         },
     include_package_data=True,
     package_data={
-        'catalogs': [
+        'nsls2-catalogs': [
             # When adding files here, remember to update MANIFEST.in as well,
             # or else they will not be included in the distribution on PyPI!
             # 'path/to/data_file',
