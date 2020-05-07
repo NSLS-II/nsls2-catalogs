@@ -27,9 +27,8 @@ def load_config_central(filename, beamline):
 
     # Each beamline has its own account for the central mongo.
     username = beamline
-    password = os.environ.get(f'{beamline}_mongo_password')
-    central_uri = (f'mongodb://{username}:{password}@mongo01.cs.nsls2.local:27212,'
-                   'mongo02.cs.nsls2.local:27213,mongo03.cs.nsls2.local:27214')
+    password = os.environ.get(f'NSLS2_CATALOGS_PASSWORD_{beamline.upper()}')
+    central_uri = (f'mongodb://{username}:{password}@10.0.0.6:27212,10.0.10.7:27213,10.0.10.8:27214/')
 
     # Remove host and port, because we need to connect with a uri to the central database.
     config['metadatastore']['config'].pop('host', None)
