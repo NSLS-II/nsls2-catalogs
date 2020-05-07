@@ -41,7 +41,7 @@ setup(
     long_description=readme,
     author="NSLS-II",
     author_email='gbischof@bnl.gov',
-    url='https://github.com/gwbischof/catalogs',
+    url='https://github.com/NSLS-II/nsls2-catalogs',
     python_requires='>={}'.format('.'.join(str(n) for n in min_version)),
     packages=find_packages(exclude=['docs', 'tests']),
     entry_points={
