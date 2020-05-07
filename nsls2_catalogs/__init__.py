@@ -12,9 +12,6 @@ del get_versions
 v0_catalog = entrypoints.get_group_named('catalogs.v0')
 v1_catalog = entrypoints.get_group_named('intake.catalogs')
 catalog = EntrypointsCatalog(entrypoints_group='catalogs.v2')
-v0_central = entrypoints.get_group_named('catalogs.central.v0')
-v1_central = entrypoints.get_group_named('catalogs.central.v1')
-central = EntrypointsCatalog(entrypoints_group='catalogs.central.v2')
 
 
 def load_config(filename):
@@ -45,5 +42,5 @@ def load_config_central(filename, beamline):
     config['metadatastore']['config']['database'] = beamline_database
     config['assets']['config']['uri'] = central_uri
     config['assets']['config']['database'] = beamline_database
-    
+
     return config
